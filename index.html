@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Agility</title>
+</head>
+
+<body>
+    <div class="pagina-inicial">
+        <div class="logo">
+            <h1 class="img-raio">AGILITY</h1>
+        </div>
+        <div class="usuario">
+            <h2>LOJISTA</h2>
+        </div>
+        <div class="entar-sistema">
+            <div class="botoes">
+                <button type="button" id="btn" class="btn entrar">ENTRAR</button>
+                <button type="button" onclick="sairTela()" class="btn cadastar">CADASTRAR</button>
+            </div>
+            <div class="tempo" id="Login">
+                <p>Login</p>
+                <br>
+                <input type="text" placeholder="login" id="login">
+                <br>
+                <input type="password" placeholder="senha" id="senha">
+                <input type="submit" onclick="logar()">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+
+        var loginIn;
+        var senhaIn;
+        function logar() {
+            loginIn = document.getElementById('login').value;
+            senhaIn = document.getElementById('senha').value;
+
+            if (loginIn == 'adm' && senhaIn == 'adm') {
+                sairTela();
+                login.value = '';
+                senhaIn.value = '';
+            }else{
+                alert('Login ou Senha errada')
+                loginIn.value = "";
+                senhaIn.value = "";
+            }
+        }
+        var login;
+        var entrar;
+        var sair;
+        window.onload = function () {
+            login = document.getElementById('Login');
+
+            entrar = document.getElementById('btn');
+            entrar.onclick = mostar;
+
+            login.classList.add('escondido');
+
+        }
+
+        function mostar() {
+            login.classList.remove('escondido')
+
+        }
+
+         function sairTela() {
+            login = document.getElementById('Login');
+            login.classList.add('escondido')
+            
+
+        }
+
+
+    </script>
+</body>
+
+</html>
