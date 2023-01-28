@@ -16,7 +16,7 @@ function logar() {
 }
 var login;
 var entrar;
-var sair;
+
 window.onload = function () {
     login = document.getElementById('Login');
 
